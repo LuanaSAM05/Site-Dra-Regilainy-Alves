@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.topo {
+  position: fixed;
+  /* fixo no topo */
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(1px);
+  /* efeito de desfoque */
+  width: 100%;
+  border-bottom: 3px solid #eec27ead;
+  box-shadow: 0 0 15px #d09338ad;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 120px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #421023;
+  font-weight: bold;
+  font-size: 22px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #9c7945;
+}
+
+/* LINK ATIVO */
+nav a.active {
+  color: #d09338ad;
+  border-bottom: 2px solid #d09338ad;
+}
+
+/* BACKGROUND HERO */
+#inicio {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #f4f1f1 65%, #421023 55%);
+  display: flex;
+  align-items: center;
+  /* centraliza verticalmente */
+  justify-content: center;
+  padding-top: 0;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* TEXTO */
+.conteudo-central {
+  margin-right: 400px;
+  margin-top: 90px;
+}
+
+.conteudo-central h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.conteudo-central p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #363636;
+}
+
+/* BOTÕES */
+.botoes {
+  display: flex;
+  gap: 10px;
+
+}
+
+.fale-conosco {
+  padding: 18px 100px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+
+}
+
+
+.fale-conosco {
+  background: linear-gradient(90deg, #5b1d34 0%, rgba(91, 29, 52, 1) 45%, rgba(181, 54, 101, 1) 100%);
+  border-radius: 30px;
+}
+
+.fale-conosco:hover {
+  background: #b53665;
+}
+
+.fale-conosco i {
+  margin-right: 8px;
+}
+
+/* LOGO */
+.logo {
+  width: 90px;
+  margin-left: 30px;
+
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+  overflow: hidden;
+  /* esconde o que passar da tela */
+}
+
+/* FOTO ADVOGADA */
+.hero-imagem {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  left: -200px;
+}
+
+/* IMAGEM */
+.hero-imagem img {
+  height: 85vh;
+  /* nunca passa da tela */
+  width: auto;
+  object-fit: contain;
+}
+
+/*AREAS DE ATUAÇÃO */
+.services {
+  min-height: 100vh;
+  padding: 120px 40px;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+/* TITULO */
+.titulo-areas {
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #421023;
+  font-family: 'Cinzel', serif;
+}
+
+/* CONTAINER DOS CARDS */
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* 2 cards lado a lado */
+  gap: 40px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+/* TITULO DO CARD */
+.card h3 {
+  color: #000000;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* TEXTO */
+.card p {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px #d09338ad;
+}
+
+/* SOBRE */
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Mantém container centralizado na tela */
+  padding: 120px 40px;
+  background: #f4f1f1;
+}
+
+.about-container {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* começa à esquerda */
+  gap: 100px;
+  /* espaço menor entre imagem e texto */
+}
+
+/* IMAGEM */
+.about-img img {
+  height: 85vh;
+  max-width: 700px;
+  object-fit: contain;
+  border-radius: 12px;
+  flex-shrink: 0;
+  /* impede que a imagem encolha */
+  margin-left: 70px;
+}
+
+/* TEXTO */
+.about-text {
+  max-width: 550px;
+  flex: 1;
+  /* permite que o texto ocupe espaço restante, mas sem ficar longe */
+  margin-left: 100px;
+}
+
+.about-text h1 {
+  font-size: 40px;
+  font-family: 'Cinzel', serif;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+/* BOTÃO / BADGE */
+#oab {
+  position: relative;
+  font-size: 14px;
+  color: #b53665;
+  display: inline-block;
+  padding: 5px 12px;
+  border: 2px solid #d09338ad;
+  border-radius: 30px;
+  font-weight: bold;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+/* camada que vai animar */
+#oab::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #d09338ad;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+/* animação */
+#oab:hover::before {
+  width: 100%;
+}
+
+#oab:hover {
+  color: #d09338ad;
+}
+
+.about-button {
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(91, 29, 52, 1) 0%, rgba(91, 29, 52, 1) 45%, rgba(181, 54, 101, 1) 100%);
+  color: white;
+  margin-top: 20px; /* desce o botão */
+}
+
+
+
+
+
+
+@media (max-width:768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
