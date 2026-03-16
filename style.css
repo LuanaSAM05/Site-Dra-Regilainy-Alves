@@ -584,7 +584,7 @@ padding:100px 20px;
     display:flex;
     justify-content:center;
     position: relative;
-    margin-bottom: -210px; /* empurra a imagem para cima, mas deixa espaço para a faixa */
+    margin-bottom: -190px; /* empurra a imagem para cima, mas deixa espaço para a faixa */
     z-index:2; /* garante que fique acima da faixa */
   }
 
