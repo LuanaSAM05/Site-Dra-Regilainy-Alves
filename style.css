@@ -121,18 +121,19 @@ gap:10px;
 }
 
 .fale-conosco{
-background:linear-gradient(90deg,#5b1d34,#b53665);
-padding:16px 40px;
-font-size:18px;
-border:none;
-border-radius:30px;
-color:white;
-cursor:pointer;
-transition:.3s;
+  background: linear-gradient(90deg,#5b1d34,#b53665);
+  padding:16px 40px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  color:white;
+  cursor:pointer;
+  transition: 0.5s ease, transform 0.3s ease; /* transição mais suave */
 }
 
 .fale-conosco:hover{
-background:#b53665;
+  background: linear-gradient(90deg,#6e2742,#c04b77); /* cores mais suaves no hover */
+  transform: translateY(-3px); /* leve elevação */
 }
 
 .fale-conosco i{
@@ -543,19 +544,21 @@ padding:100px 20px;
 
   .hero{
     gap:30px;
+    flex-direction: column;
+    align-items: center;
   }
 
-/* CENTRALIZAR BOTÃO DA SEÇÃO INICIO */
-.conteudo-central {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centraliza o conteúdo horizontalmente */
-  text-align: center;  /* garante que o texto fique centralizado também */
-}
+  /* CENTRALIZAR BOTÃO DA SEÇÃO INICIO */
+  .conteudo-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza horizontalmente */
+    text-align: center;  /* garante que o texto fique centralizado */
+  }
 
-.conteudo-central .fale-conosco {
-  margin-top: 20px; /* espaçamento acima do botão */
-}
+  .conteudo-central .fale-conosco {
+    margin-top: 20px; /* espaçamento acima do botão */
+  }
 
   .conteudo-central h2{
     font-size:26px;
@@ -570,10 +573,32 @@ padding:100px 20px;
     font-size:14px;
   }
 
-  .hero-imagem img{
-    height:40vh;
+  /* IMAGEM HERO AJUSTADA */
+  .hero-imagem{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    position: relative; /* necessário para z-index funcionar */
   }
 
+  .hero-imagem img{
+    height:35vh;       /* altura menor no mobile */
+    object-fit: contain;
+    z-index:2;         /* imagem acima da faixa */
+    margin-bottom:0;   /* remove margem negativa */
+  }
+
+  /* FAIXA HERO AJUSTADA */
+  .secao-faixa{
+    position: relative;  /* não invade a imagem */
+    width: 100%;
+    height:50px;
+    background:#421023;
+    z-index:1;           /* abaixo da imagem */
+    margin-top:-5px;     /* aproxima visualmente da imagem */
+  }
+
+  /* SOBRE */
   .about{
     padding:80px 20px;
   }
@@ -583,6 +608,7 @@ padding:100px 20px;
     margin-left:0;     
     margin-bottom:0;   /* remove margem negativa que sobrepõe o texto */
   }
+
   .about-text h1{
     font-size:26px;
   }
@@ -599,11 +625,9 @@ padding:100px 20px;
     text-align: center;
   }
 
-
   .about-text .fale-conosco{
     margin-top:20px;    /* espaçamento em cima do botão */
   }
-}
 
   .titulo-areas,
   .titulo-contato{
@@ -623,3 +647,5 @@ padding:100px 20px;
   .footer{
     padding:50px 20px;
   }
+
+}
