@@ -80,7 +80,7 @@ border-bottom:2px solid #d09338ad;
 height:100vh;
 display:flex;
 align-items:center;
-background:linear-gradient(to right,#f4f1f1 65%,#421023 35%);
+background:linear-gradient(to right,#f4f1f1 90%,#421023 10%);
 }
 
 .hero{
@@ -213,7 +213,7 @@ box-shadow:0 10px 30px #d09338ad;
 min-height:100vh;
 display:flex;
 align-items:flex-end;
-background:linear-gradient(to left,#f4f1f1 70%,#421023 30%);
+background:linear-gradient(to left,#f4f1f1 90%,#421023 10%);
 padding:80px 40px;
 }
 
