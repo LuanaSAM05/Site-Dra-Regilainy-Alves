@@ -1,9 +1,6 @@
 .vscode/
 *.log
 node_modules/
-*.png
-*.jpg
-*.jpeg
 *.gif
 .DS_Store
 Thumbs.db
