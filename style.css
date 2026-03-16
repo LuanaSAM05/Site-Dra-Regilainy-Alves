@@ -579,9 +579,10 @@ padding:100px 20px;
   }
 
   .about-img img{
-    height:45vh;
+    height:40vh;       /* altura menor */
+    margin-left:0;     
+    margin-bottom:0;   /* remove margem negativa que sobrepõe o texto */
   }
-
   .about-text h1{
     font-size:26px;
   }
@@ -591,15 +592,18 @@ padding:100px 20px;
   }
 
   /* CENTRALIZAR BOTÃO DA SEÇÃO ABOUT */
-  .about-text {
+  .about-text{
     display: flex;
     flex-direction: column;
-    align-items: center;  /* centraliza horizontalmente */
+    align-items: center;  /* centraliza texto e botão */
+    text-align: center;
   }
 
-  .about-text .fale-conosco {
-    margin-top: 20px; /* um espacinho em cima */
+
+  .about-text .fale-conosco{
+    margin-top:20px;    /* espaçamento em cima do botão */
   }
+}
 
   .titulo-areas,
   .titulo-contato{
@@ -619,5 +623,3 @@ padding:100px 20px;
   .footer{
     padding:50px 20px;
   }
-
-}
