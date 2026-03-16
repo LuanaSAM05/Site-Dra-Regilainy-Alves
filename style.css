@@ -545,6 +545,18 @@ padding:100px 20px;
     gap:30px;
   }
 
+/* CENTRALIZAR BOTÃO DA SEÇÃO INICIO */
+.conteudo-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza o conteúdo horizontalmente */
+  text-align: center;  /* garante que o texto fique centralizado também */
+}
+
+.conteudo-central .fale-conosco {
+  margin-top: 20px; /* espaçamento acima do botão */
+}
+
   .conteudo-central h2{
     font-size:26px;
   }
