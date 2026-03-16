@@ -579,6 +579,7 @@ padding:100px 20px;
     display:flex;
     justify-content:center;
     position: relative; /* necessário para z-index funcionar */
+    order:1; /* garante que a imagem vem antes da faixa */
   }
 
   .hero-imagem img{
@@ -595,7 +596,8 @@ padding:100px 20px;
     height:50px;
     background:#421023;
     z-index:1;           /* abaixo da imagem */
-    margin-top:-5px;     /* aproxima visualmente da imagem */
+    order:2;             /* aparece depois da imagem */
+    margin-top:0;        /* sem espaço extra */
   }
 
   /* SOBRE */
