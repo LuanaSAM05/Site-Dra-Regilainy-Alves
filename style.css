@@ -589,7 +589,7 @@ padding:100px 20px;
     height:48vh; /* altura ideal no mobile */
     object-fit:contain;
     margin-right:0;
-    margin-bottom:-10px; /* aproxima da faixa */
+    margin-bottom:-100px; /* aproxima da faixa */
   }
 
   /* FAIXA HERO */
