@@ -560,22 +560,27 @@ nav a.active {
   }
 
   /* HERO */
+  #inicio {
+    position: relative; /* 🔥 importante */
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
   .hero {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    padding-bottom: 60px; /* espaço pra faixa */
   }
 
-  /* CENTRALIZAR BOTÃO DA SEÇÃO INICIO */
+  /* TEXTO */
   .conteudo-central {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .conteudo-central .fale-conosco {
-    margin-top: 20px;
+    max-width: 100%;
   }
 
   .conteudo-central h2 {
@@ -591,34 +596,30 @@ nav a.active {
     font-size: 14px;
   }
 
-  /* IMAGEM HERO */
+  /* IMAGEM */
   .hero-imagem {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 0;
-    /* remove desalinhamento */
   }
 
   .hero-imagem img {
-    height: 48vh;
-    /* altura ideal no mobile */
+    height: 45vh;
     object-fit: contain;
-    margin-right: 0;
-    margin-bottom: -100px;
-    /* aproxima da faixa */
+    margin: 0;
+    transform: translateY(40px); /* 🔥 substitui margin negativa */
     z-index: 2;
-    /* garante que fique acima da faixa */
   }
 
-  /* FAIXA HERO */
+  /* FAIXA */
   .secao-faixa {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 50px;
     background: #421023;
     z-index: 1;
-    /* abaixo da imagem */
-    margin-top: 0;
   }
 
   /* SOBRE */
@@ -628,8 +629,14 @@ nav a.active {
 
   .about-img img {
     height: 40vh;
-    margin-left: 0;
-    margin-bottom: 0;
+    margin: 0;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .about-text h1 {
@@ -638,14 +645,6 @@ nav a.active {
 
   .about-text p {
     font-size: 16px;
-  }
-
-  /* CENTRALIZAR BOTÃO DA SEÇÃO ABOUT */
-  .about-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
   .about-text .fale-conosco {
@@ -658,6 +657,7 @@ nav a.active {
     font-size: 30px;
   }
 
+  /* REDES */
   .social-icons {
     gap: 15px;
   }
@@ -668,6 +668,7 @@ nav a.active {
     font-size: 20px;
   }
 
+  /* FOOTER */
   .footer {
     padding: 50px 20px;
   }
