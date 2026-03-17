@@ -549,8 +549,7 @@ padding:100px 20px;
   .hero{
     flex-direction: column;
     align-items: center;
-    gap:20px;
-    position: relative; /* referência geral */
+    gap:10px;
   }
 
   /* CENTRALIZAR BOTÃO DA SEÇÃO INICIO */
@@ -583,24 +582,22 @@ padding:100px 20px;
     width:100%;
     display:flex;
     justify-content:center;
-    position: relative;
-    margin-bottom: -180px; /* empurra a imagem para cima, mas deixa espaço para a faixa */
-    z-index:2; /* garante que fique acima da faixa */
+    margin-bottom:0; /* remove desalinhamento */
   }
 
   .hero-imagem img{
-    height:45vh;       /* aumenta a descida da imagem */
-    object-fit: contain;
-    margin-bottom:0;
+    height:48vh; /* altura ideal no mobile */
+    object-fit:contain;
+    margin-right:0;
+    margin-bottom:-10px; /* aproxima da faixa */
   }
 
   /* FAIXA HERO */
   .secao-faixa{
-    width: 100%;
+    width:100%;
     height:50px;
     background:#421023;
-    z-index:1;           /* abaixo da imagem */
-    margin-top:-30px;    /* aproxima visualmente da imagem */
+    margin-top:0; /* mantém alinhado */
   }
 
   /* SOBRE */
