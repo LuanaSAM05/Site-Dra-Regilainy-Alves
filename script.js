@@ -22,18 +22,19 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 sections.forEach(section => observer.observe(section));
-window.addEventListener('scroll', setActiveLink);
 
 // =========================
 // Botão "Fale com a Advogada"
 // =========================
 const botoesFale = document.querySelectorAll('.fale-conosco');
+const numeroAdvogada = "5562982390606"; // número da advogada
 
 botoesFale.forEach(botao => {
-  botao.addEventListener('click', () => {
-    const numeroAdvogada = "5562982390606"; // número da advogada
+  botao.addEventListener('click', (e) => {
+    // Só aplica para os botões que não são o formulário
+    if (botao.tagName === "BUTTON") return; // ignora o botão do formulário
     const url = `https://wa.me/${numeroAdvogada}`;
-    window.open(url, "_blank"); // abre o WhatsApp em nova aba
+    window.open(url, "_blank"); // abre WhatsApp do visitante
   });
 });
 
@@ -54,11 +55,11 @@ form.addEventListener("submit", function(e) {
     return;
   }
 
-  const numeroAdvogada = "5562982390606"; // número da advogada
-
+  // Monta a mensagem
   const texto = `Olá, meu nome é ${nome}.\nTelefone: ${telefone}\n\nMensagem:\n${mensagem}`;
   const mensagemFormatada = encodeURIComponent(texto);
   const url = `https://wa.me/${numeroAdvogada}?text=${mensagemFormatada}`;
 
-  window.open(url, "_blank"); // abre no WhatsApp
+  // Abre WhatsApp do visitante com a mensagem pronta
+  window.open(url, "_blank");
 });
