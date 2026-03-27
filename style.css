@@ -85,16 +85,12 @@ nav a.active {
 
 .secao-faixa {
   position: absolute;
-  /* posiciona sobre o rodapé da seção */
   bottom: 0;
   left: 0;
   width: 100%;
-  /* cobre toda a largura da tela */
   height: 50px;
-  /* altura da faixa */
   background: #421023;
-  /* gradiente horizontal */
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero {
@@ -134,14 +130,11 @@ nav a.active {
   color: white;
   cursor: pointer;
   transition: 0.5s ease, transform 0.3s ease;
-  /* transição mais suave */
 }
 
 .fale-conosco:hover {
   background: linear-gradient(90deg, #6e2742, #c04b77);
-  /* cores mais suaves no hover */
   transform: translateY(-3px);
-  /* leve elevação */
 }
 
 .fale-conosco i {
@@ -151,16 +144,15 @@ nav a.active {
 /* IMAGEM HERO */
 
 .hero-imagem {
-  display: flex;
-  align-items: flex-end;
-  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-imagem img {
   height: 80vh;
   object-fit: contain;
-  margin-bottom: -70px;
-  margin-right: 190px;
+  margin: 0;
+  transform: translateY(20px); /* controla descida suave */
 }
 
 /* AREAS */
@@ -571,7 +563,7 @@ nav a.active {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding-bottom: 60px; /* espaço pra faixa */
+    padding-bottom: 30px; /* espaço pra faixa */
   }
 
   /* TEXTO */
